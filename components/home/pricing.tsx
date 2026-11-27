@@ -23,10 +23,10 @@ export function Pricing() {
               <Reveal key={pkg.id} delay={i * 90} className="h-full">
                 <article
                   className={cn(
-                    "relative flex h-full flex-col rounded-2xl p-7",
+                    "relative flex h-full flex-col rounded-xl p-7",
                     featured
-                      ? "border border-gold/60 bg-deep text-ivory shadow-[0_24px_60px_rgba(53,24,36,0.28)] ring-1 ring-gold/40 ring-offset-4 ring-offset-ivory-dim lg:-my-3 lg:py-10"
-                      : "border border-line bg-paper shadow-[0_1px_2px_rgba(53,24,36,0.05),0_12px_32px_rgba(53,24,36,0.06)]"
+                      ? "border border-gold/60 bg-deep text-ivory shadow-[0_18px_44px_rgba(53,24,36,0.22)] lg:-my-3 lg:py-10"
+                      : "border border-line bg-paper"
                   )}
                 >
                   {featured ? (
@@ -35,13 +35,13 @@ export function Pricing() {
                     </span>
                   ) : null}
 
-                  <h3 className={cn("font-display text-2xl font-semibold", featured ? "text-ivory" : "text-deep")}>
+                  <h3 className={cn("font-display text-[1.4rem] font-semibold tracking-[-0.02em]", featured ? "text-ivory" : "text-deep")}>
                     {pkg.name}
                   </h3>
                   <p className={cn("mt-1 text-sm", featured ? "text-ivory/65" : "text-ink/60")}>{pkg.tagline}</p>
 
                   <p className="mt-5 flex items-baseline gap-2">
-                    <span className={cn("font-display text-5xl font-semibold", featured ? "text-gold-soft" : "text-wine")}>
+                    <span className={cn("font-display text-5xl font-semibold tracking-[-0.04em]", featured ? "text-gold-soft" : "text-wine")}>
                       {pkg.priceLabel}
                     </span>
                     <span className={cn("text-xs", featured ? "text-ivory/55" : "text-ink/50")}>
@@ -88,8 +88,8 @@ export function Pricing() {
 
         {/* Add-ons */}
         <Reveal className="mt-12">
-          <div className="overflow-hidden rounded-2xl border border-line bg-paper">
-            <h3 className="border-b border-line bg-blush/40 px-6 py-4 font-display text-xl font-semibold text-deep">
+          <div className="overflow-hidden rounded-xl border border-line bg-paper">
+            <h3 className="border-b border-line bg-blush/40 px-6 py-4 font-display text-[1.15rem] font-semibold tracking-[-0.015em] text-deep">
               Optional add-ons
             </h3>
             <ul className="divide-y divide-line/70">
@@ -99,7 +99,7 @@ export function Pricing() {
                     <p className="text-sm font-semibold text-deep">{addOn.name}</p>
                     <p className="mt-0.5 text-xs text-ink/55">{addOn.note}</p>
                   </div>
-                  <p className="font-display text-lg font-semibold text-wine">{addOn.priceLabel}</p>
+                  <p className="font-display text-lg font-semibold tracking-[-0.02em] text-wine">{addOn.priceLabel}</p>
                 </li>
               ))}
             </ul>

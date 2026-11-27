@@ -27,7 +27,7 @@ export function SiteHeader() {
     <>
       {/* Announcement strip — a restrained brand statement, no fake urgency */}
       <div className="bg-deep px-4 py-2 text-center">
-        <p className="text-[11px] font-medium tracking-[0.14em] text-ivory/85 sm:text-xs">
+        <p className="text-[10px] font-medium uppercase tracking-[0.16em] text-ivory/80 sm:text-[11px]">
           Thoughtfully crafted digital invitations for life’s most meaningful celebrations.
         </p>
       </div>
@@ -49,7 +49,7 @@ export function SiteHeader() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm font-medium text-ink/75 transition-colors hover:text-wine"
+                    className="text-[13px] font-medium text-ink/70 transition-colors hover:text-wine"
                   >
                     {link.label}
                   </Link>

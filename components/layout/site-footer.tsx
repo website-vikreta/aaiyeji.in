@@ -1,12 +1,11 @@
 import Link from "next/link";
 import { MessageCircle, Mail, Instagram } from "lucide-react";
-import { siteConfig, navLinks, hasWhatsApp, hasEmail, whatsappLink } from "@/lib/site-config";
+import { siteConfig, navLinks, hasWhatsApp, hasEmail, hasInstagram, whatsappLink } from "@/lib/site-config";
 import { occasions } from "@/lib/occasions";
 import { invitationDemos } from "@/lib/invitation-demos";
 import { Container } from "@/components/ui/container";
 import { Logo } from "@/components/ui/logo";
 import { ButtonLink } from "@/components/ui/button";
-import { FloralDivider } from "@/components/ui/decor";
 
 export function SiteFooter() {
   const year = new Date().getFullYear();
@@ -30,9 +29,15 @@ export function SiteFooter() {
                 </ButtonLink>
               ) : null}
               {hasEmail ? (
-                <ButtonLink href={`mailto:${siteConfig.contactEmail}`} variant="outline" size="sm" className="border-ivory/30 text-ivory hover:border-ivory hover:bg-ivory/10">
+                <ButtonLink href={`mailto:${siteConfig.contactEmail}`} variant="outline" size="sm" className="border-ivory/30 text-ivory hover:border-ivory hover:bg-ivory hover:text-deep">
                   <Mail className="h-4 w-4" aria-hidden="true" />
                   Email us
+                </ButtonLink>
+              ) : null}
+              {hasInstagram ? (
+                <ButtonLink href={siteConfig.instagramUrl} variant="outline" size="sm" className="border-ivory/30 text-ivory hover:border-ivory hover:bg-ivory hover:text-deep">
+                  <Instagram className="h-4 w-4" aria-hidden="true" />
+                  Instagram
                 </ButtonLink>
               ) : null}
               {!hasWhatsApp && !hasEmail ? (
@@ -44,7 +49,7 @@ export function SiteFooter() {
           </div>
 
           <nav aria-label="Footer — explore">
-            <h2 className="text-[11px] font-semibold uppercase tracking-[0.22em] text-gold-soft">Explore</h2>
+            <h2 className="text-[10px] font-semibold uppercase tracking-[0.18em] text-gold-soft">Explore</h2>
             <ul className="mt-4 space-y-2.5">
               {navLinks.map((link) => (
                 <li key={link.href}>
@@ -62,7 +67,7 @@ export function SiteFooter() {
           </nav>
 
           <nav aria-label="Footer — contact">
-            <h2 className="text-[11px] font-semibold uppercase tracking-[0.22em] text-gold-soft">Contact</h2>
+            <h2 className="text-[10px] font-semibold uppercase tracking-[0.18em] text-gold-soft">Contact</h2>
             <ul className="mt-4 space-y-2.5">
               {hasWhatsApp && wa ? (
                 <li>
@@ -110,7 +115,7 @@ export function SiteFooter() {
           </nav>
 
           <nav aria-label="Footer — occasions">
-            <h2 className="text-[11px] font-semibold uppercase tracking-[0.22em] text-gold-soft">Occasions</h2>
+            <h2 className="text-[10px] font-semibold uppercase tracking-[0.18em] text-gold-soft">Occasions</h2>
             <ul className="mt-4 space-y-2.5">
               {occasions.slice(0, 6).map((o) => (
                 <li key={o.id}>
@@ -123,7 +128,7 @@ export function SiteFooter() {
           </nav>
 
           <nav aria-label="Footer — live demos">
-            <h2 className="text-[11px] font-semibold uppercase tracking-[0.22em] text-gold-soft">Live demos</h2>
+            <h2 className="text-[10px] font-semibold uppercase tracking-[0.18em] text-gold-soft">Live demos</h2>
             <ul className="mt-4 space-y-2.5">
               {invitationDemos.map((demo) => (
                 <li key={demo.slug}>
@@ -136,9 +141,7 @@ export function SiteFooter() {
           </nav>
         </div>
 
-        <FloralDivider className="mx-auto mt-12 h-5 w-48 text-gold/60" />
-
-        <div className="mt-8 flex flex-col items-center gap-2 text-center text-xs text-ivory/55 sm:flex-row sm:justify-between sm:text-left">
+        <div className="mt-12 border-t border-ivory/10 pt-8 flex flex-col items-center gap-2 text-center text-xs text-ivory/55 sm:flex-row sm:justify-between sm:text-left">
           <p>© {year} Aaiyeji. Crafted with care, detail by detail.</p>
           <p>Sample invitations use fictional names, venues and dates.</p>
         </div>

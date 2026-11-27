@@ -18,7 +18,6 @@ import { cn } from "@/lib/utils";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Reveal } from "@/components/ui/reveal";
-import { FloralDivider } from "@/components/ui/decor";
 
 const iconMap: Record<string, LucideIcon> = {
   DoorOpen,
@@ -44,7 +43,7 @@ function InvitationFragment() {
     <div aria-hidden="true" className="rounded-[1.6rem] border border-gold/40 bg-night p-3 shadow-[0_24px_60px_rgba(53,24,36,0.25)]">
       <div className="rounded-[1.25rem] border border-gold/25 p-5">
         <p className="text-center font-devanagari text-xs text-gold-soft">शुभ विवाह</p>
-        <p className="mt-1 text-center font-display text-2xl font-semibold italic text-ivory">
+        <p className="mt-1 text-center font-accent text-2xl italic text-ivory">
           Aarohi <span className="text-gold-soft">&</span> Vihaan
         </p>
         <div className="mt-4 flex items-center justify-center gap-2 rounded-lg border border-gold/30 bg-gold/10 px-3 py-2.5">
@@ -104,12 +103,12 @@ export function Features() {
               const Icon = iconMap[feature.icon] ?? DoorOpen;
               return (
                 <li key={feature.title} className="flex gap-4">
-                  <span className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gold/50 bg-blush/40 text-wine">
+                  <span className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-line bg-blush/40 text-wine">
                     <Icon className="h-4.5 w-4.5" aria-hidden="true" />
                   </span>
                   <div>
                     <div className="flex flex-wrap items-center gap-2">
-                      <h3 className="font-display text-lg font-semibold text-deep">{feature.title}</h3>
+                      <h3 className="font-display text-[1.05rem] font-semibold tracking-[-0.015em] text-deep">{feature.title}</h3>
                       <span
                         className={cn(
                           "rounded-full border px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.1em]",
@@ -135,10 +134,9 @@ export function Features() {
         </div>
 
         <Reveal className="lg:sticky lg:top-28">
-          <div className="rounded-[2rem] bg-blush/50 p-6 sm:p-9">
+          <div className="rounded-xl border border-line bg-paper p-6 sm:p-9">
             <InvitationFragment />
-            <FloralDivider className="mx-auto mt-6 h-4 w-36 text-gold" />
-            <p className="mt-3 text-center text-xs text-ink/55">
+            <p className="mt-5 border-t border-line pt-4 text-center text-xs text-ink/55">
               An illustrative glimpse of the guest experience.
             </p>
           </div>

@@ -21,7 +21,7 @@ export function MiniInvite({
       <div aria-hidden="true" className={cn("rounded-[1.4rem] border border-gold/40 bg-night p-3 text-center", className)}>
         <div className="rounded-[1.05rem] border border-gold/25 px-4 py-5">
           <p className="font-devanagari text-[11px] text-gold-soft">शुभ विवाह</p>
-          <p className="mt-2 font-display text-xl font-semibold italic leading-tight text-ivory">
+          <p className="mt-2 font-accent text-xl font-semibold italic leading-tight text-ivory">
             Aarohi <span className="text-gold-soft">&</span> Vihaan
           </p>
           <div className="mx-auto my-3 h-px w-14 bg-gold/50" />
@@ -47,7 +47,7 @@ export function MiniInvite({
           <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-sage">
             You’re invited
           </p>
-          <p className="mt-1.5 font-display text-xl font-semibold italic leading-tight text-deep">
+          <p className="mt-1.5 font-accent text-xl font-semibold italic leading-tight text-deep">
             Meera <span className="text-wine">&</span> Arjun
           </p>
           <p className="mt-2 text-[10px] font-medium uppercase tracking-[0.22em] text-ink/60">
@@ -66,7 +66,7 @@ export function MiniInvite({
         <p className="text-[10px] font-semibold uppercase tracking-[0.34em] text-ink/70">
           Sara & Kabir
         </p>
-        <p className="mt-3 font-display text-2xl font-medium text-deep">24 . 01 . 2027</p>
+        <p className="mt-3 font-accent text-2xl font-medium text-deep">24 . 01 . 2027</p>
         <p className="mt-2 text-[10px] uppercase tracking-[0.22em] text-ink/50">Assagao · Goa</p>
         <div className="mx-auto mt-4 h-1.5 w-1.5 rounded-full bg-wine" />
       </div>
@@ -82,7 +82,7 @@ export function MiniInvite({
           <path d="M4 38 H60" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
         </svg>
         <p className="mt-2 text-[10px] uppercase tracking-[0.24em] text-ivory/70">A warm welcome for</p>
-        <p className="mt-1 font-display text-lg font-semibold italic text-gold-soft">The Sharma family</p>
+        <p className="mt-1 font-accent text-lg font-semibold italic text-gold-soft">The Sharma family</p>
         <p className="mt-2 text-[10px] text-ivory/60">Aarohi & Vihaan · 12 Feb 2027</p>
         <span className="mt-3 inline-block rounded-full border border-gold/40 bg-gold/10 px-3 py-1 text-[10px] font-semibold text-gold-soft">
           Your personal link

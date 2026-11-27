@@ -44,7 +44,7 @@ export function Logo({
       <AaiyejiSymbol tone={tone} className={symbolClassName} />
       <span
         className={cn(
-          "font-display text-[1.35rem] font-semibold leading-none tracking-[0.24em]",
+          "font-display text-[1.25rem] font-bold leading-none tracking-[0.16em]",
           tone === "dark" ? "text-ivory" : "text-wine"
         )}
       >
