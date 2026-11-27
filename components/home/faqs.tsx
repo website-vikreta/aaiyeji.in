@@ -68,7 +68,7 @@ export function Faqs() {
           title="Questions, answered honestly."
           description="The things families usually ask before booking — no fine print surprises."
         />
-        <div className="mt-10 overflow-hidden rounded-2xl border border-line bg-paper">
+        <div className="mt-10 overflow-hidden rounded-xl border border-line bg-paper">
           {faqs.map((faq, i) => {
             const open = openIndex === i;
             return (
@@ -82,12 +82,12 @@ export function Faqs() {
                     id={`faq-button-${i}`}
                     className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left transition-colors hover:bg-blush/30 sm:px-6"
                   >
-                    <span className="font-display text-lg font-semibold leading-snug text-deep">
+                    <span className="font-display text-[1.05rem] font-semibold leading-snug tracking-[-0.015em] text-deep">
                       {faq.q}
                     </span>
                     <ChevronDown
                       className={cn(
-                        "h-5 w-5 shrink-0 text-gold transition-transform duration-300",
+                        "h-4.5 w-4.5 shrink-0 text-wine/60 transition-transform duration-300",
                         open && "rotate-180"
                       )}
                       aria-hidden="true"

@@ -24,7 +24,7 @@ yarn-error.log*
 # env files — never commit real contact details or secrets
 .env
 .env*.local
-
+.env.local
 # typescript
 *.tsbuildinfo
 next-env.d.ts

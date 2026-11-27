@@ -1,19 +1,26 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, DM_Sans, Noto_Serif_Devanagari } from "next/font/google";
+import { Bricolage_Grotesque, Instrument_Sans, Instrument_Serif, Noto_Serif_Devanagari } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/lib/site-config";
 
-const display = Cormorant_Garamond({
+const display = Bricolage_Grotesque({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  style: ["normal", "italic"],
-  variable: "--font-cormorant",
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-bricolage",
   display: "swap",
 });
 
-const body = DM_Sans({
+const body = Instrument_Sans({
   subsets: ["latin"],
-  variable: "--font-dmsans",
+  variable: "--font-instrument",
+  display: "swap",
+});
+
+const accent = Instrument_Serif({
+  subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
+  variable: "--font-instrument-serif",
   display: "swap",
 });
 
@@ -58,7 +65,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${display.variable} ${body.variable} ${devanagari.variable}`}>
+    <html lang="en" className={`${display.variable} ${body.variable} ${accent.variable} ${devanagari.variable}`}>
       <body className="bg-ivory font-body text-ink antialiased">
         <a href="#main" className="skip-link">
           Skip to content
