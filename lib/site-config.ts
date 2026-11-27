@@ -37,6 +37,7 @@ export const siteConfig = {
 
 export const hasWhatsApp = siteConfig.whatsappNumber.length > 0;
 export const hasEmail = siteConfig.contactEmail.length > 0;
+export const hasInstagram = siteConfig.instagramUrl.length > 0;
 
 /** Build a wa.me link with an optional prefilled message. Returns null when unconfigured. */
 export function whatsappLink(message?: string): string | null {

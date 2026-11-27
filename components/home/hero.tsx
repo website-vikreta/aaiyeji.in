@@ -28,7 +28,7 @@ function RoyalScreen() {
         <path d="M4 38 H60" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
       </svg>
       <p className="mt-2 font-devanagari text-[11px] text-gold-soft">शुभ विवाह</p>
-      <p className="mt-1.5 font-display text-[1.35rem] font-semibold italic leading-tight text-ivory">
+      <p className="mt-1.5 font-accent text-[1.35rem] italic leading-tight text-ivory">
         Aarohi <span className="text-gold-soft">&</span> Vihaan
       </p>
       <p className="mt-1.5 text-[9px] font-medium uppercase tracking-[0.3em] text-gold-soft">12 · 02 · 2027</p>
@@ -61,7 +61,7 @@ function FloralScreen() {
     <div aria-hidden="true" className="bg-ivory px-4 pb-5 pt-6 text-center">
       <FloralDivider className="mx-auto h-4 w-24 text-sage" />
       <p className="mt-3 text-[9px] font-semibold uppercase tracking-[0.26em] text-sage">You’re invited</p>
-      <p className="mt-1.5 font-display text-[1.3rem] font-semibold italic leading-tight text-deep">
+      <p className="mt-1.5 font-accent text-[1.3rem] italic leading-tight text-deep">
         Meera <span className="text-wine">&</span> Arjun
       </p>
       <p className="mt-1.5 text-[9px] font-medium uppercase tracking-[0.24em] text-ink/55">20 December 2026</p>
@@ -85,14 +85,14 @@ export function Hero() {
       <Container className="relative grid items-center gap-12 py-14 sm:py-18 lg:grid-cols-[1.02fr_0.98fr] lg:gap-8 lg:py-24">
         {/* Copy */}
         <div className="max-w-xl">
-          <p className="flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.26em] text-sage">
-            <span aria-hidden="true" className="h-px w-8 bg-gold" />
+          <p className="flex items-center gap-2.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-wine/80">
+            <span aria-hidden="true" className="h-1.5 w-1.5 bg-gold" />
             Aaiyeji · Digital Invitation Studio
           </p>
-          <h1 className="mt-5 font-display text-[2.6rem] font-semibold leading-[1.05] text-deep sm:text-6xl lg:text-[4.1rem]">
+          <h1 className="mt-5 font-display text-[2.9rem] font-bold leading-[0.98] tracking-[-0.04em] text-deep sm:text-6xl lg:text-[4.75rem]">
             A beautiful way to say, <em className="italic text-wine">you’re invited.</em>
           </h1>
-          <p className="mt-5 max-w-lg text-base leading-relaxed text-ink/75 sm:text-lg">
+          <p className="mt-6 max-w-lg text-[15px] leading-relaxed text-ink/70 sm:text-base">
             Personalised invitation websites for weddings and life’s special celebrations.
             Every detail, every feeling, in one beautiful link.
           </p>
@@ -105,7 +105,7 @@ export function Hero() {
               Create my invitation
             </ButtonLink>
           </div>
-          <ul className="mt-8 flex flex-wrap gap-x-5 gap-y-2 text-[13px] font-medium text-ink/70">
+          <ul className="mt-8 flex flex-wrap gap-x-5 gap-y-2 border-t border-line pt-5 text-[12px] font-medium text-ink/65">
             <li className="flex items-center gap-1.5">
               <IndianRupee className="h-3.5 w-3.5 text-gold" aria-hidden="true" />
               From ₹999
@@ -142,7 +142,6 @@ export function Hero() {
           </p>
         </div>
       </Container>
-      <FloralDivider className="mx-auto mb-8 h-5 w-48 text-gold/70" />
     </section>
   );
 }

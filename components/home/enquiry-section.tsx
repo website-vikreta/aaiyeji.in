@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Send, MessageCircle, Mail, Copy, Check, AlertCircle } from "lucide-react";
-import { siteConfig, hasWhatsApp, hasEmail, whatsappLink } from "@/lib/site-config";
+import { Send, MessageCircle, Mail, Instagram, Copy, Check, AlertCircle } from "lucide-react";
+import { siteConfig, hasWhatsApp, hasEmail, hasInstagram, whatsappLink } from "@/lib/site-config";
 import { packages, getPackage } from "@/lib/pricing";
 import { occasionOptions } from "@/lib/occasions";
 import {
@@ -14,7 +14,6 @@ import {
 import { copyText } from "@/lib/utils";
 import { Container } from "@/components/ui/container";
 import { Button, ButtonLink } from "@/components/ui/button";
-import { FloralDivider } from "@/components/ui/decor";
 
 const initialValues: EnquiryValues = {
   name: "",
@@ -79,7 +78,7 @@ function Field({
 }
 
 const inputClasses =
-  "w-full rounded-xl border border-line bg-ivory/60 px-4 py-3 text-[15px] text-ink placeholder:text-ink/35 transition-colors focus:border-wine focus:bg-paper focus:outline-none";
+  "w-full rounded-lg border border-line bg-ivory/60 px-4 py-3 text-[15px] text-ink placeholder:text-ink/35 transition-colors focus:border-wine focus:bg-paper focus:outline-none";
 
 export function EnquirySection() {
   const [values, setValues] = useState<EnquiryValues>(initialValues);
@@ -155,14 +154,14 @@ export function EnquirySection() {
     <section id="enquire" className="bg-blush/45 bg-grain py-16 sm:py-24">
       <Container className="grid items-start gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
         <div>
-          <p className="flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.26em] text-sage">
-            <span aria-hidden="true" className="h-px w-8 bg-gold" />
+          <p className="flex items-center gap-2.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-wine/80">
+            <span aria-hidden="true" className="h-1.5 w-1.5 bg-gold" />
             Begin your invitation
           </p>
-          <h2 className="mt-4 font-display text-3xl font-semibold leading-[1.12] text-deep sm:text-4xl md:text-[2.75rem]">
+          <h2 className="mt-4 font-display text-[2rem] font-semibold leading-[1.05] tracking-[-0.03em] text-deep sm:text-4xl md:text-[3rem]">
             Let’s make your invitation feel like <em className="italic text-wine">yours.</em>
           </h2>
-          <p className="mt-5 max-w-md text-base leading-relaxed text-ink/75">
+          <p className="mt-5 max-w-md text-[15px] leading-relaxed text-ink/70">
             Tell us a little about your celebration. We’ll come back with ideas, a clear timeline
             and a quote — before you commit to anything.
           </p>
@@ -180,20 +179,25 @@ export function EnquirySection() {
                 {siteConfig.contactEmail}
               </ButtonLink>
             ) : null}
+            {hasInstagram ? (
+              <ButtonLink href={siteConfig.instagramUrl} variant="ghost">
+                <Instagram className="h-4 w-4" aria-hidden="true" />
+                Instagram
+              </ButtonLink>
+            ) : null}
           </div>
-          <FloralDivider className="mt-10 h-4 w-36 text-gold" />
         </div>
 
         <form
           onSubmit={onSubmit}
           noValidate
           aria-label="Invitation enquiry"
-          className="rounded-2xl border border-line bg-paper p-6 shadow-[0_1px_2px_rgba(53,24,36,0.05),0_16px_44px_rgba(53,24,36,0.08)] sm:p-8"
+          className="rounded-xl border border-line bg-paper p-6 shadow-[0_1px_2px_rgba(53,24,36,0.04),0_10px_30px_rgba(53,24,36,0.05)] sm:p-8"
         >
           <ol className="mb-6 space-y-3 rounded-xl border border-line bg-ivory/60 p-4">
             {processSteps.map((step, i) => (
               <li key={step} className="flex items-start gap-3 text-sm text-ink/75">
-                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-gold bg-paper font-display text-sm font-semibold text-wine">
+                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md border border-line bg-paper font-display text-sm font-semibold text-wine">
                   {i + 1}
                 </span>
                 <span className="pt-1">{step}</span>
@@ -298,7 +302,7 @@ export function EnquirySection() {
           </Button>
 
           <p className="mt-3 text-center text-xs leading-relaxed text-ink/50">
-            This form opens WhatsApp or email with your message prefilled — you press send there.
+            This form prepares your enquiry for WhatsApp — you press send there.
             Nothing is stored on this website.
           </p>
 

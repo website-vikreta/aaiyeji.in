@@ -3,18 +3,17 @@ import { Container } from "@/components/ui/container";
 import { ButtonLink } from "@/components/ui/button";
 import { Reveal } from "@/components/ui/reveal";
 import { MiniInvite } from "@/components/ui/mini-invite";
-import { FloralDivider } from "@/components/ui/decor";
 
 export function GuestPersonalisation() {
   return (
     <section id="personalisation" className="on-dark bg-deep py-16 sm:py-24">
       <Container className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
         <div>
-          <p className="flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.26em] text-gold-soft">
-            <span aria-hidden="true" className="h-px w-8 bg-gold/60" />
+          <p className="flex items-center gap-2.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-gold-soft">
+            <span aria-hidden="true" className="h-1.5 w-1.5 bg-gold" />
             The Royal experience
           </p>
-          <h2 className="mt-4 font-display text-3xl font-semibold leading-[1.12] text-ivory sm:text-4xl md:text-[2.75rem]">
+          <h2 className="mt-4 font-display text-[2rem] font-semibold leading-[1.05] tracking-[-0.03em] text-ivory sm:text-4xl md:text-[3rem]">
             Every guest feels <em className="italic text-gold-soft">personally</em> invited.
           </h2>
           <p className="mt-5 max-w-lg text-base leading-relaxed text-ivory/75">
@@ -45,7 +44,7 @@ export function GuestPersonalisation() {
         </div>
 
         <Reveal>
-          <div className="rounded-[2rem] border border-gold/25 bg-night/60 p-6 sm:p-8">
+          <div className="rounded-xl border border-gold/25 bg-night/60 p-6 sm:p-8">
             <div className="grid grid-cols-2 gap-4 sm:gap-6">
               <figure>
                 <MiniInvite variant="royal" className="w-full" />
@@ -60,8 +59,7 @@ export function GuestPersonalisation() {
                 </figcaption>
               </figure>
             </div>
-            <FloralDivider className="mx-auto mt-6 h-4 w-36 text-gold/60" />
-            <p className="mt-3 text-center text-[11px] uppercase tracking-[0.18em] text-ivory/45">
+            <p className="mt-5 border-t border-gold/20 pt-4 text-center text-[10px] uppercase tracking-[0.16em] text-ivory/45">
               Illustrative sample · fictional names
             </p>
           </div>
