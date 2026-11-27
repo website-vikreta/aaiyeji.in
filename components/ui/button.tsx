@@ -5,19 +5,19 @@ export type ButtonVariant = "primary" | "outline" | "light" | "ghost";
 export type ButtonSize = "sm" | "md" | "lg";
 
 const base =
-  "inline-flex items-center justify-center gap-2 rounded-full font-body font-semibold transition-all duration-200 select-none";
+  "inline-flex items-center justify-center gap-2 rounded-full font-body font-semibold tracking-[-0.01em] transition-all duration-200 select-none";
 
 const variants: Record<ButtonVariant, string> = {
-  primary: "bg-wine text-ivory shadow-sm hover:bg-wine-soft hover:shadow-md",
-  outline: "border border-wine/35 text-wine hover:border-wine hover:bg-wine/5",
-  light: "bg-ivory text-deep shadow-sm hover:bg-paper",
+  primary: "bg-wine text-ivory hover:bg-deep",
+  outline: "border border-deep/20 text-deep hover:border-deep hover:bg-deep hover:text-ivory",
+  light: "bg-ivory text-deep hover:bg-gold-soft",
   ghost: "text-wine underline-offset-4 hover:underline",
 };
 
 const sizes: Record<ButtonSize, string> = {
-  sm: "px-4 py-2.5 text-sm",
-  md: "px-6 py-3 text-[15px]",
-  lg: "px-7 py-3.5 text-base",
+  sm: "px-4 py-2.5 text-[13px]",
+  md: "px-5.5 py-3 text-sm",
+  lg: "px-7 py-3.5 text-[15px]",
 };
 
 export function buttonClasses(variant: ButtonVariant = "primary", size: ButtonSize = "md", className?: string) {

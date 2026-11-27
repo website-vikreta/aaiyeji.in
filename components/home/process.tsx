@@ -39,16 +39,16 @@ export function Process() {
         <div className="relative mt-14">
           <div
             aria-hidden="true"
-            className="absolute left-[12%] right-[12%] top-6 hidden border-t border-dashed border-gold/60 lg:block"
+            className="absolute left-[12%] right-[12%] top-6 hidden border-t border-line lg:block"
           />
           <ol className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
             {steps.map((step, i) => (
               <Reveal key={step.title} delay={i * 90}>
                 <li className="relative flex h-full flex-col items-center text-center lg:items-start lg:text-left">
-                  <span className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full border border-gold bg-ivory font-display text-xl font-semibold text-wine shadow-sm">
+                  <span className="relative z-10 flex h-11 w-11 items-center justify-center rounded-lg border border-line bg-paper font-display text-lg font-semibold text-wine">
                     {i + 1}
                   </span>
-                  <h3 className="mt-4 font-display text-xl font-semibold text-deep">{step.title}</h3>
+                  <h3 className="mt-4 font-display text-[1.15rem] font-semibold tracking-[-0.015em] text-deep">{step.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-ink/70">{step.description}</p>
                 </li>
               </Reveal>
